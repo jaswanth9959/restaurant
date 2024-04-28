@@ -88,24 +88,23 @@ const pizzas = [
   {
     name: "Nuggets",
     description:
-      "Tangy BBQ sauce topped with grilled chicken, red onions, and cilantro.",
+      "grilled chicken topped with Tangy BBQ sauce, red onions, and cilantro.",
 
     category: "sides",
     stock: 11,
     options: ["8 count", "12 count"],
     price: [5.4, 6.9],
-    image: "/images/3.jpg",
+    image: "/images/4.jpg",
   },
   {
     name: "pepsi",
-    description:
-      "Tangy BBQ sauce topped with grilled chicken, red onions, and cilantro.",
+    description: "Refeshing Soda",
 
     category: "beverage",
     stock: 12,
     options: ["Small", "Medium", "Large"],
     price: [3.5, 5.4, 6.9],
-    image: "/images/3.jpg",
+    image: "/images/5.jpg",
   },
 ];
 
