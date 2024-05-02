@@ -81,27 +81,12 @@ function Dashboard() {
                   </Button>
                 </Col>
               </LinkContainer>
-              <LinkContainer to="/board/staff/add">
-                <Col md={2}>
-                  <Button className="mx-2 btn-color" style={{ width: "200px" }}>
-                    {" "}
-                    Create Staff Account
-                  </Button>
-                </Col>
-              </LinkContainer>
+
               <LinkContainer to="/board/users">
                 <Col md={2}>
                   <Button className="mx-2 btn-color" style={{ width: "200px" }}>
                     {" "}
                     Customers
-                  </Button>
-                </Col>
-              </LinkContainer>
-              <LinkContainer to="/board/menu/add">
-                <Col md={2}>
-                  <Button className="mx-2 btn-color" style={{ width: "200px" }}>
-                    {" "}
-                    Add Menu Items
                   </Button>
                 </Col>
               </LinkContainer>

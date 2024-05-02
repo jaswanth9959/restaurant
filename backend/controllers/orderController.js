@@ -12,6 +12,7 @@ const createOrder = asyncHandler(async (req, res) => {
     taxPrice,
     deliveryPrice,
     totalPrice,
+    pickup,
   } = req.body;
   if (orderItems && orderItems.length === 0) {
     res.status(400);
@@ -31,6 +32,7 @@ const createOrder = asyncHandler(async (req, res) => {
     itemsPrice,
     taxPrice,
     deliveryPrice,
+    pickup,
     totalPrice,
   });
 

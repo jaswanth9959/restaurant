@@ -6,9 +6,9 @@ const pizzas = [
 
     category: "pizza",
     toppings: ["Tomato Sauce", "Mozzarella Cheese", "Fresh Basil"],
-    options: ["Small", "Medium", "Large"],
+    options: ["5Inch", "8Inch", "12Inch"],
     price: [10, 11, 12],
-    stock: 10,
+
     image: "/images/1.jpg",
   },
   {
@@ -18,9 +18,8 @@ const pizzas = [
 
     category: "Meat Lovers",
     toppings: ["Tomato Sauce", "Mozzarella Cheese", "Pepperoni Slices"],
-    options: ["Small", "Medium", "Large"],
+    options: ["5Inch", "8Inch", "12Inch"],
     price: [12.99, 13.99, 14.99],
-    stock: 10,
     image: "/images/2.jpg",
   },
   {
@@ -30,16 +29,14 @@ const pizzas = [
 
     category: "pizza",
     toppings: ["BBQ Sauce", "Grilled Chicken", "Red Onions", "Cilantro"],
-    options: ["Small", "Medium", "Large"],
+    options: ["5Inch", "8Inch", "12Inch"],
     price: [12.99, 13.99, 14.99],
-    stock: 20,
     image: "/images/3.jpg",
   },
   {
     name: "Vegetarian Supreme",
     description:
       "Loaded with a variety of fresh vegetables including bell peppers, onions, mushrooms, and olives.",
-
     category: "pizza",
     toppings: [
       "Tomato Sauce",
@@ -49,8 +46,7 @@ const pizzas = [
       "Mushrooms",
       "Olives",
     ],
-    stock: 20,
-    options: ["Small", "Medium", "Large"],
+    options: ["5Inch", "8Inch", "12Inch"],
     price: [12.99, 13.99, 14.99],
     image: "/images/1.jpg",
   },
@@ -61,9 +57,8 @@ const pizzas = [
 
     category: "pizza",
     toppings: ["Tomato Sauce", "Mozzarella Cheese", "Ham", "Pineapple Chunks"],
-    options: ["Small", "Medium", "Large"],
+    options: ["5Inch", "8Inch", "12Inch"],
     price: [12.99, 13.99, 14.99],
-    stock: 12,
     image: "/images/2.jpg",
   },
   {
@@ -80,9 +75,8 @@ const pizzas = [
       "Ham",
       "Bacon",
     ],
-    stock: 11,
     price: [12.99, 13.99, 14.99],
-    options: ["Small", "Medium", "Large"],
+    options: ["5Inch", "8Inch", "12Inch"],
     image: "/images/3.jpg",
   },
   {
@@ -91,7 +85,6 @@ const pizzas = [
       "grilled chicken topped with Tangy BBQ sauce, red onions, and cilantro.",
 
     category: "sides",
-    stock: 11,
     options: ["8 count", "12 count"],
     price: [5.4, 6.9],
     image: "/images/4.jpg",
@@ -101,7 +94,6 @@ const pizzas = [
     description: "Refeshing Soda",
 
     category: "beverage",
-    stock: 12,
     options: ["Small", "Medium", "Large"],
     price: [3.5, 5.4, 6.9],
     image: "/images/5.jpg",

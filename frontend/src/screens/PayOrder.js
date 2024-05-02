@@ -229,6 +229,26 @@ function PayOrder() {
                 </Card>
               </Col>
             )}
+            {order.pickup && (
+              <Row className="py-2">
+                <Col md={{ span: 10, offset: 1 }}>
+                  <ListGroup>
+                    <ListGroup.Item
+                      style={{
+                        border: "1px solid orange",
+                        marginBottom: "10px",
+                      }}
+                    >
+                      <Row className="py-2">
+                        <h2>Order PickUp Details</h2>
+                        <Col md={3}>PickUp Time: </Col>
+                        <Col md={9}>{order.pickup}</Col>
+                      </Row>
+                    </ListGroup.Item>
+                  </ListGroup>
+                </Col>
+              </Row>
+            )}
             {order.orderType !== "Counter" && order.deliveryAddress && (
               <Col md={{ span: 10, offset: 1 }}>
                 <Card border="warning" className="mt-3">

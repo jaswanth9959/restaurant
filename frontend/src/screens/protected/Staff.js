@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, ListGroup, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { LinkContainer } from "react-router-bootstrap";
 import {
   useGetStaffQuery,
   useDeleteStaffMutation,
@@ -24,6 +25,14 @@ function Staff() {
       </Link>
 
       <h1 className="text-center py-3">Staff</h1>
+      <LinkContainer to="/board/staff/add">
+        <Col md={2} className="mx-auto">
+          <Button className="m-2 btn-color" style={{ width: "200px" }}>
+            {" "}
+            Create Staff Account
+          </Button>
+        </Col>
+      </LinkContainer>
       <Col md={{ span: 10, offset: 1 }}>
         {isLoading ? (
           <p>Loading...</p>

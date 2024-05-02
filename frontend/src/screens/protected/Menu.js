@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, ListGroup, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { LinkContainer } from "react-router-bootstrap";
 import {
   useGetMenuQuery,
   useDeleteItemMutation,
@@ -24,6 +25,14 @@ function Menu() {
         <Button className="btn-color">Back</Button>
       </Link>
       <h1 className="text-center py-3">Menu Items</h1>
+      <LinkContainer to="/board/menu/add">
+        <Col md={2} className="mx-auto">
+          <Button className="m-2 btn-color" style={{ width: "200px" }}>
+            {" "}
+            Add Menu Items
+          </Button>
+        </Col>
+      </LinkContainer>
       <Col md={{ span: 10, offset: 1 }}>
         {isLoading ? (
           <p>Loading...</p>

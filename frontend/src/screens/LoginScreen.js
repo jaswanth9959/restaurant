@@ -40,10 +40,10 @@ function LoginScreen() {
   return (
     <div className="login">
       <div className="login-container">
-        <h2>Login</h2>
+        <h2>Customer Login</h2>
         <form onSubmit={submitHandler}>
           <div className="input-group">
-            <label htmlFor="username">Enter User Email</label>
+            <label htmlFor="username">Enter Email</label>
             <input
               type="text"
               id="username"
@@ -53,7 +53,7 @@ function LoginScreen() {
             />
           </div>
           <div className="input-group">
-            <label htmlFor="password">Enter User Password</label>
+            <label htmlFor="password">Enter Password</label>
             <input
               type="password"
               id="password"

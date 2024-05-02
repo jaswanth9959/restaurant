@@ -92,7 +92,7 @@ function MenuItem({ item }) {
                   style={{
                     border: "none",
                   }}
-                  onClick={() => (qty > 1 ? setQty((q) => q - 1) : setQty(1))}
+                  onClick={() => setQty((q) => q - 1)}
                 >
                   -
                 </button>
@@ -113,9 +113,7 @@ function MenuItem({ item }) {
                   style={{
                     border: "none",
                   }}
-                  onClick={() =>
-                    qty < item.stock ? setQty((q) => q + 1) : setQty(item.stock)
-                  }
+                  onClick={() => setQty((q) => q + 1)}
                 >
                   +
                 </button>

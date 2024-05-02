@@ -74,6 +74,9 @@ const orderSchema = mongoose.Schema(
     paidAt: {
       type: Date,
     },
+    pickup: {
+      type: String,
+    },
     deliveredAt: {
       type: Date,
     },

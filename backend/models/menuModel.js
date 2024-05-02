@@ -23,10 +23,6 @@ const menuSchema = new mongoose.Schema(
       type: Array,
       required: true,
     },
-    stock: {
-      type: Number,
-      required: true,
-    },
     price: {
       type: Array,
       required: true,

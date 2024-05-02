@@ -40,7 +40,7 @@ function StaffAdd() {
   return (
     <Row className="justify-content-md-center mt-5">
       <Col md={6}>
-        <LinkContainer to="/board">
+        <LinkContainer to="/board/staff">
           <Button className="btn-color mb-3" variant="light">
             {" "}
             Back

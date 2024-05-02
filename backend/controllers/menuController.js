@@ -37,7 +37,6 @@ const createItem = asyncHandler(async (req, res) => {
     description,
     options,
     price,
-    stock,
     toppings,
   } = req.body;
   const item = new Menu({
@@ -48,7 +47,6 @@ const createItem = asyncHandler(async (req, res) => {
     description,
     options,
     price,
-    stock,
     toppings,
   });
   try {
@@ -60,16 +58,8 @@ const createItem = asyncHandler(async (req, res) => {
 });
 
 const updateItem = asyncHandler(async (req, res) => {
-  const {
-    name,
-    category,
-    options,
-    image,
-    description,
-    price,
-    stock,
-    toppings,
-  } = req.body;
+  const { name, category, options, image, description, price, toppings } =
+    req.body;
 
   const item = await Menu.findById(req.params.id);
 
@@ -79,7 +69,6 @@ const updateItem = asyncHandler(async (req, res) => {
     item.description = description;
     item.options = options;
     item.image = image;
-    item.stock = stock;
     item.category = category;
     item.toppings = toppings;
     const updateditem = await item.save();

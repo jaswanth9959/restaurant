@@ -43,6 +43,10 @@ const cartSlice = createSlice({
       state.deliveryAddress = action.payload;
       return updateCart(state);
     },
+    savePickup: (state, action) => {
+      state.pickup = action.payload;
+      return updateCart(state);
+    },
     saveUserDetails: (state, action) => {
       state.userDetails = action.payload;
       return updateCart(state);
@@ -54,6 +58,7 @@ export const {
   addTocart,
   removefromcart,
   clearcart,
+  savePickup,
   savePaymentMethod,
   saveDeliveryAddress,
   saveUserDetails,

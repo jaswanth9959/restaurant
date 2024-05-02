@@ -41,6 +41,9 @@ import Analytics from "./screens/protected/Analytics";
 import ReadyOrders from "./screens/protected/ReadyOrders";
 import StaffProfile from "./screens/protected/StaffProfile";
 import UserDetails from "./screens/UserDetails";
+import Options from "./screens/Options";
+import PickUp from "./screens/Pickup";
+import OrderDetails from "./screens/OrderDetails";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
@@ -51,10 +54,13 @@ const router = createBrowserRouter(
         <Route index={true} path="/" element={<HomeScreen />} />
         <Route path="/cart" element={<CartScreen />} />
         <Route path="/paymentmethod" element={<Payment />} />
+        <Route path="/options" element={<Options />} />
+        <Route path="/pickup" element={<PickUp />} />
         <Route path="/delivery" element={<Address />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/order/:id" element={<PayOrder />} />
         <Route path="/userdetails" element={<UserDetails />} />
+        <Route path="/orderdetails" element={<OrderDetails />} />
         <Route path="/success" element={<Success />} />
         <Route path="/cancel" element={<Cancel />} />
         <Route path="/staffprofile" element={<StaffProfile />} />

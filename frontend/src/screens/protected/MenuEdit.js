@@ -18,7 +18,6 @@ function MenuEdit() {
   const [image, setImage] = useState("");
   const [topping, setTopping] = useState("");
   const [option, setOption] = useState("");
-  const [stock, setStock] = useState(0);
   const { data: item, refetch, isLoading, error } = useGetItemByIdQuery(itemId);
   const { data: categories } = useGetCategoryQuery();
   const [updateItem, { isLoading: loadingCreate }] = useUpdateItemMutation();
@@ -38,7 +37,6 @@ function MenuEdit() {
           name,
           price,
           description,
-          stock,
           options,
           toppings,
           image,
@@ -68,7 +66,6 @@ function MenuEdit() {
       setName(item.name);
       setDescription(item.description);
       setCategory(item.category);
-      setStock(item.stock);
       setImage(item.image);
       setPrices(item.price.join(","));
       setOption(item.options.join(","));
@@ -182,16 +179,6 @@ function MenuEdit() {
                     />
                   </div>
                 )}
-                <div className="input-group">
-                  <label htmlFor="password">Stock</label>
-                  <input
-                    type="number"
-                    id="passwordc"
-                    value={stock}
-                    onChange={(e) => setStock(e.target.value)}
-                    required
-                  />
-                </div>
                 <button type="submit">Update</button>
                 {isLoading && <p>Loading...</p>}
                 {loadingCreate && <p>Loading...</p>}

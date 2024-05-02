@@ -37,9 +37,10 @@ const Address = () => {
         deliveryAddress: cart.deliveryAddress,
         paymentMethod: cart.paymentMethod,
         itemsPrice: cart.itemsPrice,
-        deliveryPrice: cart.shippingPrice,
+        deliveryPrice: cart.deliveryAddress ? cart.shippingPrice : 0,
         taxPrice: cart.taxPrice,
         totalPrice: cart.totalPrice,
+        pickup: cart.deliveryAddress ? "" : cart.pickup.val,
       }).unwrap();
       dispatch(clearcart());
       navigate(`/order/${res._id}`);

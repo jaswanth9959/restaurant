@@ -40,7 +40,7 @@ const CartScreen = () => {
   };
 
   const checkoutHandler = () => {
-    navigate("/login?redirect=/paymentmethod");
+    navigate("/login?redirect=/options");
   };
 
   return (

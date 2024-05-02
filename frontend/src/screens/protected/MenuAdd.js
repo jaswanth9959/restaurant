@@ -16,7 +16,6 @@ function MenuAdd() {
   const [image, setImage] = useState("");
   const [topping, setTopping] = useState("");
   const [option, setOption] = useState("");
-  const [stock, setStock] = useState(0);
   const navigate = useNavigate();
   const { data: categories, isLoading, error } = useGetCategoryQuery();
   const [createItem, { isLoading: loadingCreate }] = useCreateItemMutation();
@@ -36,7 +35,6 @@ function MenuAdd() {
           name,
           price,
           description,
-          stock,
           options,
           toppings,
           image,
@@ -63,7 +61,7 @@ function MenuAdd() {
   return (
     <Row className="justify-content-md-center mt-5">
       <Col md={6}>
-        <LinkContainer to="/board">
+        <LinkContainer to="/board/menu">
           <Button className="btn-color mb-3" variant="light">
             {" "}
             Back
@@ -169,16 +167,6 @@ function MenuAdd() {
                     />
                   </div>
                 )}
-                <div className="input-group">
-                  <label htmlFor="password">Stock</label>
-                  <input
-                    type="number"
-                    id="passwordc"
-                    value={stock}
-                    onChange={(e) => setStock(e.target.value)}
-                    required
-                  />
-                </div>
                 <button type="submit">Add</button>
                 {isLoading && <p>Loading...</p>}
                 {loadingCreate && <p>Loading...</p>}

@@ -54,7 +54,7 @@ function UserEdit() {
         ) : (
           <div>
             <div className="login-container">
-              <h2 className="textColor">Edit User</h2>
+              <h2 className="textColor">Edit Customer</h2>
               <form onSubmit={submitHandler}>
                 <div className="input-group">
                   <label htmlFor="firstname">Enter First Name</label>

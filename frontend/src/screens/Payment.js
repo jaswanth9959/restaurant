@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 const Payment = () => {
   const navigate = useNavigate();
   const { userInfo } = useSelector((state) => state.auth);
+  const cart = useSelector((state) => state.cart);
 
   const [paymentMethod, setPaymentMethod] = useState("Card");
 
@@ -15,10 +16,15 @@ const Payment = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(savePaymentMethod(paymentMethod));
-    if (userInfo.role === "user") {
-      navigate("/delivery");
+
+    if (userInfo.role === "user" && cart?.pickup) {
+      navigate("/orderdetails");
     } else {
-      navigate("/userdetails");
+      if (userInfo.role === "user") {
+        navigate("/delivery");
+      } else {
+        navigate("/userdetails");
+      }
     }
   };
 
